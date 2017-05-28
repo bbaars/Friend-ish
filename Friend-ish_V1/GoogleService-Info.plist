@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>529332568745-eglm2tucqtknrpltottt0qjf9fjuf2dn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.529332568745-eglm2tucqtknrpltottt0qjf9fjuf2dn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAMYof6fF1pNOav4Stu00uFlKPTImuvb58</string>
+	<key>GCM_SENDER_ID</key>
+	<string>529332568745</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.BB.Friend-ish-V1</string>
+	<key>PROJECT_ID</key>
+	<string>friend-ish</string>
+	<key>STORAGE_BUCKET</key>
+	<string>friend-ish.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:529332568745:ios:c0180ac244ed6ffb</string>
+	<key>DATABASE_URL</key>
+	<string>https://friend-ish.firebaseio.com</string>
+</dict>
+</plist>
