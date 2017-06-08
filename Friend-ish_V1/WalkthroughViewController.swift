@@ -130,7 +130,7 @@ class WalkthroughViewController: UIViewController, UIViewControllerTransitioning
                 print("BRANDON: User cancelled the facebook login")
             } else {
                 print("BRANDON: Successfully authenticated with Facebook")
-                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 
                 /* Once the user accepts the permissions, it pulls their data done to update labels / photos */
                 FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.width(\(width)).height(\(height)), friends"]).start(completionHandler: { (connection, result, error) in
@@ -207,7 +207,7 @@ class WalkthroughViewController: UIViewController, UIViewControllerTransitioning
                     self.headerLabels[self.index] = "Welcome, \(name)"
                     self.headerLabel.text = "\(self.headerLabels[self.index])"
                 }
-                let credential = FIRTwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
+                let credential = TwitterAuthProvider.credential(withToken: (session?.authToken)!, secret: (session?.authTokenSecret)!)
                 self.firebaseAuth(credential)
                 currentUser["isTwitter"] = true
                 self.updateTwitterFollowers((session?.userName)!)
@@ -231,11 +231,11 @@ class WalkthroughViewController: UIViewController, UIViewControllerTransitioning
      *
      *
      */
-    func firebaseAuth(_ newCredential: FIRAuthCredential) {
+    func firebaseAuth(_ newCredential: AuthCredential) {
         
         if currentUser["isFacebook"] as? Bool == true || currentUser["isTwitter"] as? Bool == true {
         
-            FIRAuth.auth()?.currentUser?.link(with: newCredential, completion: { (user, error) in
+            Auth.auth().currentUser?.link(with: newCredential, completion: { (user, error) in
                 if error != nil {
                     print("BRANDON: Unable to authenticate with Firebase due to - \(String(describing: error))")
                 } else {
@@ -250,7 +250,7 @@ class WalkthroughViewController: UIViewController, UIViewControllerTransitioning
             })
         } else {
             
-            FIRAuth.auth()?.signIn(with: newCredential, completion: { (user, error) in
+            Auth.auth().signIn(with: newCredential, completion: { (user, error) in
                 if error != nil {
                     print("BRANDON: Unable to authenticate with Firebase due to - \(String(describing: error))")
                 } else {

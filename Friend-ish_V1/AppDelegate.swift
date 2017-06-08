@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         /* Firebase Configure */
-        FIRApp.configure()
+        FirebaseApp.configure()
         
         /* Facebook Authentication */
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyAgvRmL0GrIUgHwllyT81ua8lhNHTVlg9M")
         
         /* load the data from firebase, this is an asyncronous process, should finish by the time the "viewDidLoad()" */
-        self.loadUserDataFromFirebase()
+        //self.loadUserDataFromFirebase()
         
         /* Modify the UINavigationBar */
         let navigationAppearance = UINavigationBar.appearance()

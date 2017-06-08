@@ -16,7 +16,7 @@ extension AppDelegate {
         
         DataService.ds.REF_USER_CURRENT.observe(.value, with: { (snapshot) in
         
-            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     currentUser["\(snap.key)"] = snap.value
                 }

@@ -27,7 +27,7 @@ class FlipDismissAnimationViewController: NSObject, UIViewControllerAnimatedTran
         /*
          * 1. Animation shrinks the view, we need to flip the initial and final frames
          */
-        let initialFrame = transitionContext.initialFrame(for: fromVC)
+        _ = transitionContext.initialFrame(for: fromVC)
         let finalFrame = destinationFrame
         
         

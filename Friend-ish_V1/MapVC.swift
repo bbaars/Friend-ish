@@ -31,7 +31,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var mapHasCenteredOnce = false
     var geoFire: GeoFire!
-    var geoFireRef: FIRDatabaseReference!
+    var geoFireRef: DatabaseReference!
     var user = [String:Any]()
     var userAnnotations = [String : MKPointAnnotation]()
     
@@ -92,7 +92,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
                 
                 DataService.ds.REF_USERS.child("\(key)").observe(.value, with: { (snapshot) in
                     
-                    if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
                         
                         user = [:]
                         

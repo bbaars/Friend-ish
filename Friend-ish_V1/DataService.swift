@@ -11,10 +11,10 @@ import Firebase
 import SwiftKeychainWrapper
 
 /* This creates a reference to our root storage of our database */
-let DB_BASE = FIRDatabase.database().reference()
+let DB_BASE = Database.database().reference()
 
 /* This creates a reference to our root storage of our database */
-let DB_STORAGE = FIRStorage.storage().reference()
+let DB_STORAGE = Storage.storage().reference()
 
 class DataService {
     
@@ -29,11 +29,11 @@ class DataService {
     /* Storage Reference */
     private var _REF_PROFILE_PIC = DB_STORAGE.child("profile-pics")
     
-    var REF_BASE: FIRDatabaseReference {
+    var REF_BASE: DatabaseReference {
         return _REF_BASE
     }
     
-    var REF_USER_CURRENT: FIRDatabaseReference {
+    var REF_USER_CURRENT: DatabaseReference {
         let user = REF_USERS.child(USER_UID)
         return user
     }
@@ -43,11 +43,11 @@ class DataService {
         return UID!
     }
     
-    var REF_USERS: FIRDatabaseReference {
+    var REF_USERS: DatabaseReference {
         return _REF_USERS
     }
     
-    var REF_PROFILE_IMG: FIRStorageReference {
+    var REF_PROFILE_IMG: StorageReference {
         return _REF_PROFILE_PIC
     }
     
