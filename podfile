@@ -13,7 +13,6 @@ pod 'FBSDKLoginKit'
 pod 'SwiftKeychainWrapper'
 pod 'Fabric'
 pod 'TwitterKit'
-pod 'GoogleMaps'
 pod 'HMSegmentedControl'
   # Pods for Friend-ish_V1
 
